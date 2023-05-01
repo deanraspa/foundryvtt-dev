@@ -1,6 +1,6 @@
 # foundryvtt-dev-system
 
-This respository is a starting point for developing a new system using
+This repository is a starting point for developing a new system using
 devcontainers in VS Code.  
 
 ## Initial Setup

@@ -1,8 +1,15 @@
 #!/bin/bash
 
-if [ ! -d ".foundryvtt" ] && [ -f "foundryvtt.zip" ]; then
-    unzip foundryvtt.zip -d .foundryvtt
-    mkdir .foundrydata
+if [ ! -d ".foundryvtt" ]; then 
+    echo ".foundryvtt directory not found"
+    if [ -f "foundryvtt.zip" ]; then
+        echo "Installing Foundry VTT from foundryvtt.zip"
+        unzip foundryvtt.zip -d .foundryvtt
+        mkdir .foundrydata
+    fi
+else
+    echo "Foundry has already been installed."
+    echo "Delete the .foundryvtt directory and run this script again if you want to install a different version."
 fi
 
 CONFIG_DIR=".foundrydata/Config"
